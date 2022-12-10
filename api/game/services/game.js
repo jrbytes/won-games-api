@@ -38,7 +38,7 @@ async function getGameInfo(slug) {
 
 async function setImage({ image, game, field = "cover" }) {
   try {
-    const url = `https:${image}_bg_crop_1680x655.jpg`;
+    const url = `https:${image}.jpg`;
     const { data } = await axios.get(url, { responseType: "arraybuffer" });
     const buffer = Buffer.from(data, "base64");
 
